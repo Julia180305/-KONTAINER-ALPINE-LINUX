@@ -39,3 +39,5 @@ NB : untuk mengaktifkan dorkernya
 service docker stop
 ```
 NB : jika ingin berhentikan service docker
+
+```
