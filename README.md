@@ -40,4 +40,45 @@ service docker stop
 ```
 NB : jika ingin berhentikan service docker
 
+## install webserver python docker
 ```
+apk add python3
+```
+NB : roses install python untuk webserver
+
+### finish install python
+```
+clear
+```
+NB :clear dipakai untuk membersihkan tampilan terminal, supaya tidak penuh atau membingungkan.
+
+### Webserver Python bootUP
+```
+python3 -m http.server --d www 8080
+```
+NB : Perintah ini digunakan untuk menjalankan server lokal agar kamu bisa mengakses dan melihat isi folder www melalui web browser. Cocok untuk uji coba website secara lokal tanpa perlu aplikasi server tambahan seperti Apache atau Nginx.
+
+#### INDEX.HTML
+```
+<doctype html>
+<html>
+<center><h1> Hello World From Docker python</center></h1>
+</html>
+```
+NB : Ini adalah kode HTML sederhana untuk menampilkan halaman web dengan tulisan:
+"Hello World From Docker python" — biasanya untuk tes server atau Docker.
+
+### SHELLA-ALPINE 
+```
+docker run --rm -it --name hugo-alpine \
+  -v $(pwd):/src \
+  -p 8080:8080 \
+  klakegg/hugo:0.101.0-alpine \
+  shell
+```
+NB: Perintah ini dipakai untuk membuka terminal Hugo berbasis Alpine dalam Docker, dengan folder kerja lokal terhubung dan siap menjalankan Hugo lewat port 8080.
+### berhentikan service docker 
+```
+service docker stop
+````
+service docker stop digunakan untuk mematikan layanan Docker di Linux. Artinya, Docker dan semua container berhenti bekerja sampai dinyalakan kembali.
