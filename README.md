@@ -40,4 +40,8 @@ service docker stop
 ```
 NB : jika ingin berhentikan service docker
 
+## install webserver python docker
 ```
+apk add python3
+```
+NB : adalah perintah yang digunakan di dalam sistem Alpine Linux untuk menginstal Python 3.
